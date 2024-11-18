@@ -6,5 +6,6 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: "https://social-links.github.io",
+  site: "https://santiagomac.github.io",
+  base: "/social-links"
 });
