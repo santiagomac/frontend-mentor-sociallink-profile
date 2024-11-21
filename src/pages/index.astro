@@ -1,5 +1,6 @@
 ---
 import Button from "../components/Button.astro";
+import { links } from "../data";
 import Layout from "../layouts/Layout.astro";
 
 const BASE_URL = import.meta.env.BASE_URL;
@@ -22,16 +23,7 @@ const BASE_URL = import.meta.env.BASE_URL;
         </p>
       </div>
       <ul class="pt-7 pb-7 px-6 flex flex-col gap-y-4">
-        <Button title="Github" href="https://github.com/santiagomac" />
-        <!-- <Button title="Twitter" href="#" /> -->
-        <Button
-          title="LinkedIn"
-          href="https://www.linkedin.com/in/santiagomazuera/"
-        />
-        <Button
-          title="Instagram"
-          href="https://www.instagram.com/santimazuers/"
-        />
+        {links.map((link) => <Button {...link} />)}
       </ul>
     </div>
   </main>
